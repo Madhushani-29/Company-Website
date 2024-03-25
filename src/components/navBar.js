@@ -14,11 +14,13 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
+import KeyboardArrowDownRoundedIcon from "@mui/icons-material/KeyboardArrowDownRounded";
+import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
 
 const drawerWidth = 240;
-const navItems = ["Home", "About", "Contact"];
+const navItems = ["About Us", "Features", "Contact"];
 
-function Navbar(props) {
+function Navbar1(props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
@@ -28,8 +30,11 @@ function Navbar(props) {
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
-      <Typography variant="h6" sx={{ my: 2 }}>
-        MUI
+      <Typography variant="h6" sx={{ fontSize: "30px", fontWeight: "bold" }}>
+        Company Logo
+      </Typography>
+      <Typography variant="h6" sx={{ fontSize: "13px" }}>
+        English
       </Typography>
       <Divider />
       <List>
@@ -50,7 +55,16 @@ function Navbar(props) {
   return (
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
-      <AppBar component="nav">
+      <AppBar
+        component="nav"
+        sx={{
+          paddingLeft: "50px",
+          paddingTop: "30px",
+          paddingRight: "40px",
+          backgroundColor: "transparent",
+          boxShadow: "none",
+        }}
+      >
         <Toolbar>
           <IconButton
             color="inherit"
@@ -62,18 +76,68 @@ function Navbar(props) {
             <MenuIcon />
           </IconButton>
           <Typography
-            variant="h6"
             component="div"
-            sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
+            sx={{
+              flexGrow: 1,
+              display: { xs: "none", sm: "block" },
+              textAlign: "start",
+              verticalAlign: "bottom",
+            }}
           >
-            MUI
+            <Typography
+              variant="h6"
+              sx={{
+                color: "#ffff",
+                fontSize: "30px",
+                fontWeight: "bold",
+                display: "inline",
+              }}
+            >
+              Company Logo
+            </Typography>
+            <Typography
+              variant="body1"
+              sx={{
+                color: "#ffff",
+                fontSize: "10px",
+                display: "inline",
+                pl: "20px",
+                pr: "8px",
+              }}
+            >
+              English
+            </Typography>
+            <KeyboardArrowDownRoundedIcon
+              height
+              sx={{
+                fontSize: "30px",
+                verticalAlign: "bottom",
+                marginBottom: "5px",
+              }}
+            />
           </Typography>
+
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             {navItems.map((item) => (
-              <Button key={item} sx={{ color: "#fff" }}>
+              <Button
+                key={item}
+                sx={{
+                  marginLeft: "40px",
+                  fontSize: "20px",
+                  color: "#FFFFFF",
+                  textTransform: "none",
+                }}
+              >
                 {item}
               </Button>
             ))}
+            <MenuRoundedIcon
+              sx={{
+                verticalAlign: "bottom",
+                fontSize: "50px",
+                marginLeft: "40px",
+              }}
+            />
           </Box>
         </Toolbar>
       </AppBar>
@@ -84,7 +148,7 @@ function Navbar(props) {
           open={mobileOpen}
           onClose={handleDrawerToggle}
           ModalProps={{
-            keepMounted: true, // Better open performance on mobile.
+            keepMounted: true,
           }}
           sx={{
             display: { xs: "block", sm: "none" },
@@ -101,8 +165,8 @@ function Navbar(props) {
   );
 }
 
-Navbar.propTypes = {
+Navbar1.propTypes = {
   window: PropTypes.func,
 };
 
-export default Navbar;
+export default Navbar1;
