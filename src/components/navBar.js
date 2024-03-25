@@ -20,7 +20,7 @@ import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
 const drawerWidth = 240;
 const navItems = ["About Us", "Features", "Contact"];
 
-function Navbar1(props) {
+function Navbar(props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
@@ -165,8 +165,8 @@ function Navbar1(props) {
   );
 }
 
-Navbar1.propTypes = {
+Navbar.propTypes = {
   window: PropTypes.func,
 };
 
-export default Navbar1;
+export default Navbar;

@@ -1,7 +1,7 @@
 import { Box, Grid, Typography } from "@mui/material";
 import React from "react";
 import HeroBanner from "../assets/HeroBanner.png";
-import OverlayImage from "../assets/OverlayImage.svg"; // Assuming this is the path to your overlay image
+import OverlayImage from "../assets/OverlayImage.svg"; 
 
 const Home = () => {
   return (

@@ -14,7 +14,7 @@ const AboutUs = () => {
           </Box>
         </Typography>
 
-        <Typography lineHeight='40px' sx={{ color: "#676767", fontSize: "20px" }}>
+        <Typography lineHeight='44px' sx={{ color: "#676767", fontSize: "20px" }}>
           Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
           nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
           sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
