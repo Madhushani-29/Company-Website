@@ -55,7 +55,12 @@ const Home = () => {
           Welcome to our company...
         </Typography>
         <Typography
-          sx={{ color: "#ffff", fontSize: "22px", paddingTop: "30px" }}
+          lineHeight="40px"
+          sx={{
+            color: "#ffff",
+            fontSize: "22px",
+            paddingTop: "30px",
+          }}
         >
           Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
           nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
