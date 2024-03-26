@@ -72,7 +72,8 @@ function Navbar(props) {
           paddingLeft: "50px",
           paddingTop: "30px",
           paddingRight: "40px",
-          background: "linear-gradient(180deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.5) 25%, rgba(0,0,0,0) 100%)",
+          background:
+            "linear-gradient(180deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.5) 25%, rgba(0,0,0,0) 100%)",
           boxShadow: "none",
         }}
       >
@@ -138,7 +139,7 @@ function Navbar(props) {
                   color: "#FFFFFF",
                   textTransform: "none",
                 }}
-                onClick={() => scrollToSection(item.id)} // Use arrow function here
+                onClick={() => scrollToSection(item.id)}
               >
                 {item.title}
               </Button>

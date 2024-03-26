@@ -7,8 +7,21 @@ import { Button, CardActionArea, CardActions } from "@mui/material";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import ArrowForwardIosRoundedIcon from "@mui/icons-material/ArrowForwardIosRounded";
+import NewsView from "./newsView";
 
 const NewsSwiper = ({ newsData }) => {
+  const [open, setOpen] = React.useState(false);
+  const [selectedNews, setSelectedNews] = React.useState(null);
+
+  const handleClickOpen = (news) => {
+    setSelectedNews(news);
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
   return (
     <Grid>
       <Swiper
@@ -55,9 +68,11 @@ const NewsSwiper = ({ newsData }) => {
                     fontWeight: "bold",
                     fontSize: "15px",
                   }}
+                  onClick={() => {handleClickOpen(news); }}
                 >
                   Read
                 </Button>
+
                 <ArrowForwardIosRoundedIcon
                   sx={{ color: "#0864b1", fontSize: "15px" }}
                 />
@@ -82,6 +97,7 @@ const NewsSwiper = ({ newsData }) => {
           ></Box>
         ))}
       </Grid>
+      <NewsView handleClose={handleClose} open={open} news={selectedNews}/>
     </Grid>
   );
 };
