@@ -3,7 +3,7 @@ import React from "react";
 
 const ContactUs = () => {
   return (
-    <Grid marginTop="25px">
+    <Grid marginTop="40px">
       <Grid sx={{ textAlign: "center", marginBottom: "25px" }}>
         <Typography
           sx={{ color: "#0864b1", fontSize: "30px", fontWeight: "800" }}

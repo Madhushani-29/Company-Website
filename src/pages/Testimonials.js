@@ -10,7 +10,7 @@ import TestimonialsData from "../data/testimonialsData";
 
 const Testimonials = () => {
   return (
-    <Grid display="flex" justifyContent="center" marginTop="180px">
+    <Grid display="flex" justifyContent="center" marginTop="130px">
       <Grid maxWidth="1000px" sx={{ textAlign: "center" }}>
         <Typography
           sx={{ color: "#0864b1", fontSize: "30px", fontWeight: "800" }}
