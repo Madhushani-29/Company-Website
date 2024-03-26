@@ -10,6 +10,7 @@ import NewsSwiper from "../components/newsSwiper";
 const LatestNews = () => {
   return (
     <Grid
+      id="features"
       display="flex"
       justifyContent="center"
       marginTop="70px"

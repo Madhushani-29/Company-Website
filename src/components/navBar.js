@@ -10,22 +10,32 @@ import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
-import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import KeyboardArrowDownRoundedIcon from "@mui/icons-material/KeyboardArrowDownRounded";
 import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
+import MenuIcon from "@mui/icons-material/Menu";
 
 const drawerWidth = 240;
-const navItems = ["About Us", "Features", "Contact"];
+const navItems = [
+  { id: "about-us", title: "About Us" },
+  { id: "features", title: "Features" },
+  { id: "contact", title: "Contact" },
+];
 
 function Navbar(props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
-
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
+  };
+
+  const scrollToSection = (id) => {
+    const aboutUsSection = document.getElementById(id);
+    if (aboutUsSection) {
+      aboutUsSection.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   const drawer = (
@@ -39,9 +49,9 @@ function Navbar(props) {
       <Divider />
       <List>
         {navItems.map((item) => (
-          <ListItem key={item} disablePadding>
+          <ListItem key={item.id} disablePadding>
             <ListItemButton sx={{ textAlign: "center" }}>
-              <ListItemText primary={item} />
+              <ListItemText primary={item.title} />
             </ListItemButton>
           </ListItem>
         ))}
@@ -57,11 +67,12 @@ function Navbar(props) {
       <CssBaseline />
       <AppBar
         component="nav"
+        position="fixed"
         sx={{
           paddingLeft: "50px",
           paddingTop: "30px",
           paddingRight: "40px",
-          backgroundColor: "transparent",
+          background: "linear-gradient(180deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.5) 25%, rgba(0,0,0,0) 100%)",
           boxShadow: "none",
         }}
       >
@@ -120,17 +131,19 @@ function Navbar(props) {
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             {navItems.map((item) => (
               <Button
-                key={item}
+                key={item.id}
                 sx={{
                   marginLeft: "40px",
                   fontSize: "20px",
                   color: "#FFFFFF",
                   textTransform: "none",
                 }}
+                onClick={() => scrollToSection(item.id)} // Use arrow function here
               >
-                {item}
+                {item.title}
               </Button>
             ))}
+
             <MenuRoundedIcon
               sx={{
                 verticalAlign: "bottom",

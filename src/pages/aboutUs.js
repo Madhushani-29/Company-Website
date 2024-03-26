@@ -3,7 +3,7 @@ import React from "react";
 
 const AboutUs = () => {
   return (
-    <Grid display="flex" justifyContent="center" marginTop="70px">
+    <Grid id="about-us" display="flex" justifyContent="center" marginTop="70px">
       <Grid maxWidth="700px" sx={{ textAlign: "center" }}>
         <Typography
           sx={{ color: "#0864b1", fontSize: "30px", fontWeight: "800" }}
