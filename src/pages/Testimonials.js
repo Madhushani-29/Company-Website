@@ -11,7 +11,7 @@ import TestimonialsData from "../data/testimonialsData";
 const Testimonials = () => {
   return (
     <Grid display="flex" justifyContent="center" marginTop="140px">
-      <Grid maxWidth="700px" sx={{ textAlign: "center" }}>
+      <Grid maxWidth="1000px" sx={{ textAlign: "center" }}>
         <Typography
           sx={{ color: "#0864b1", fontSize: "28px", fontWeight: "800" }}
         >
@@ -19,15 +19,15 @@ const Testimonials = () => {
           <Box style={{ display: "flex", justifyContent: "center" }}>
             <Divider
               color="#676767"
-              sx={{ width: "170px", height: "6px", marginBottom: "70px" }}
+              sx={{ width: "170px", height: "6px", marginBottom: "30px" }}
             />
           </Box>
         </Typography>
 
         <Swiper
           style={{
-            "--swiper-navigation-color": "red",
-            "--swiper-pagination-color": "red",
+            "--swiper-navigation-color": "RGBA(103,103,103,0.15 )",
+            "--swiper-pagination-color": "RGBA(103,103,103,0.15 )",
           }}
           lazy={true}
           navigation={true}
@@ -36,38 +36,64 @@ const Testimonials = () => {
         >
           {TestimonialsData.map((testimonials) => (
             <SwiperSlide>
-              <Grid  display="flex" justifyContent="center" >
-              <Box maxWidth='500px'>
-                <Box
-                  sx={{
-                    display: "flex",
-                    justifyContent: "flex-end",
-                    alignItems: "center",
-                  }}
-                >
-                  <FormatQuoteRoundedIcon
-                    sx={{ color: "#0864b1", fontSize: "50px" }}
-                  />
-                </Box>
-                <Typography>{testimonials.content1}</Typography>
-                <Box
-                  sx={{
-                    display: "flex",
-                    justifyContent: "flex-start",
-                    alignItems: "center",
-                  }}
-                >
-                  <FormatQuoteRoundedIcon
+              <Grid display="flex" justifyContent="center">
+                <Box maxWidth="700px">
+                  <Box
                     sx={{
-                      color: "#0864b1",
-                      fontSize: "50px",
-                      transform: "rotate(180deg)",
+                      display: "flex",
+                      justifyContent: "flex-end",
+                      alignItems: "center",
                     }}
-                  />
+                  >
+                    <FormatQuoteRoundedIcon
+                      sx={{ color: "#0864b1", fontSize: "50px" }}
+                    />
+                  </Box>
+                  <Typography
+                    sx={{
+                      color: "#676767",
+                      fontSize: "20px",
+                      lineHeight: "35px",
+                    }}
+                  >
+                    {testimonials.content1}
+                  </Typography>
+                  <Box
+                    sx={{
+                      display: "flex",
+                      justifyContent: "flex-start",
+
+                      alignItems: "center",
+                    }}
+                  >
+                    <FormatQuoteRoundedIcon
+                      sx={{
+                        color: "#0864b1",
+                        fontSize: "50px",
+                        transform: "rotate(180deg)",
+                      }}
+                    />
+                  </Box>
+                  <Typography
+                    sx={{
+                      color: "#0864B1",
+                      fontSize: "20px",
+                      fontWeight: "bold",
+                      lineHeight: "0px",
+                    }}
+                  >
+                    {testimonials.content2}
+                  </Typography>
+                  <Typography
+                    sx={{
+                      color: "#676767",
+                      fontSize: "20px",
+                      lineHeight: "90px",
+                    }}
+                  >
+                    {testimonials.content3}
+                  </Typography>
                 </Box>
-                <Typography>{testimonials.content2}</Typography>
-                <Typography>{testimonials.content3}</Typography>
-              </Box>
               </Grid>
             </SwiperSlide>
           ))}
