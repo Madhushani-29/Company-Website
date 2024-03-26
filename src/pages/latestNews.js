@@ -34,13 +34,13 @@ const LatestNews = () => {
 
       <Grid maxWidth="85%" sx={{ textAlign: "center" }}>
         <Typography
-          sx={{ color: "#0864b1", fontSize: "28px", fontWeight: "800" }}
+          sx={{ color: "#0864b1", fontSize: "30px", fontWeight: "800" }}
         >
           Latest News
           <Box style={{ display: "flex", justifyContent: "center" }}>
             <Divider
               color="#676767"
-              sx={{ width: "170px", height: "6px", marginBottom: "70px" }}
+              sx={{ width: "140px", height: "6px", marginBottom: "70px" }}
             />
           </Box>
         </Typography>

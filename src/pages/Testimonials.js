@@ -10,16 +10,16 @@ import TestimonialsData from "../data/testimonialsData";
 
 const Testimonials = () => {
   return (
-    <Grid display="flex" justifyContent="center" marginTop="140px">
+    <Grid display="flex" justifyContent="center" marginTop="180px">
       <Grid maxWidth="1000px" sx={{ textAlign: "center" }}>
         <Typography
-          sx={{ color: "#0864b1", fontSize: "28px", fontWeight: "800" }}
+          sx={{ color: "#0864b1", fontSize: "30px", fontWeight: "800" }}
         >
           Testimonials
           <Box style={{ display: "flex", justifyContent: "center" }}>
             <Divider
               color="#676767"
-              sx={{ width: "170px", height: "6px", marginBottom: "30px" }}
+              sx={{ width: "140px", height: "6px", marginBottom: "30px" }}
             />
           </Box>
         </Typography>
@@ -51,6 +51,7 @@ const Testimonials = () => {
                   </Box>
                   <Typography
                     sx={{
+                      paddingRight:'30px',
                       color: "#676767",
                       fontSize: "20px",
                       lineHeight: "35px",
