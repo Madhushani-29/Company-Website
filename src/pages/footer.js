@@ -5,6 +5,7 @@ import LinkedinImage from "../assets/LinkedinImage.svg";
 import InstagramImage from "../assets/InstagramImage.svg";
 import TwitterImage from "../assets/TwitterImage.svg";
 import YoutubeImage from "../assets/YoutubeImage.svg";
+import SocialMediaButton from "../components/socialMediaButton";
 
 const Footer = () => {
   return (
@@ -43,30 +44,22 @@ const Footer = () => {
         </Typography>
 
         <Grid display="flex" gap="12px">
-          <img
-            src={FacebookImage}
-            alt="Facebook"
-            style={{ height: "42px", width: "42px" }}
+          <SocialMediaButton
+            url="https://www.facebook.com/"
+            icon={FacebookImage}
           />
-          <img
-            src={TwitterImage}
-            alt="Twitter"
-            style={{ height: "42px", width: "42px" }}
+          <SocialMediaButton url="https://twitter.com/" icon={TwitterImage} />
+          <SocialMediaButton
+            url="https://www.instagram.com/"
+            icon={InstagramImage}
           />
-          <img
-            src={InstagramImage}
-            alt="Instagram"
-            style={{ height: "42px", width: "42px" }}
+          <SocialMediaButton
+            url="https://www.linkedin.com//"
+            icon={LinkedinImage}
           />
-          <img
-            src={LinkedinImage}
-            alt="Linkedin"
-            style={{ height: "42px", width: "42px" }}
-          />
-          <img
-            src={YoutubeImage}
-            alt="Youtube"
-            style={{ height: "42px", width: "42px" }}
+          <SocialMediaButton
+            url="https://www.youtube.com/"
+            icon={YoutubeImage}
           />
         </Grid>
 
