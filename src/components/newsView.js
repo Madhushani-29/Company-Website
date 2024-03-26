@@ -9,6 +9,7 @@ const NewsView = ({ handleClose, open, news }) => {
   const handleOnClose = () => {
     handleClose();
   };
+  if (!news) return null;
   return (
     <Dialog
       open={open}
